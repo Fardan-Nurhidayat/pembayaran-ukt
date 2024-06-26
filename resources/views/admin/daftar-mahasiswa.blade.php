@@ -27,22 +27,22 @@
                                 Kelompok
                             </th>
                         </tr>
-                        @foreach ($users as $user)
-                            <tr class="text-center">
+                        @foreach ($detailUsers as $detailUser)
+                            <tr class="text-start">
                                 <td class="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap">
-                                    {{ $user->name }}
+                                    {{ $detailUser->user->name }}
                                 </td>
                                 <td class="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap">
-                                    {{ $user->detailUser->nim }}
+                                    {{ $detailUser->nim }}
                                 </td>
                                 <td class="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap">
-                                    {{ $user->email }}
+                                    {{ $detailUser->user->email }}
                                 </td>
                                 <td class="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap">
-                                    {{ $user->detailUser->jurusan }}
+                                    {{ $detailUser->jurusan }}
                                 </td>
                                 <td class="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap">
-                                    {{ $user->detailUser->kelompok }}
+                                    {{ $detailUser->kelompok }}
                                 </td>
                             </tr>
                         @endforeach

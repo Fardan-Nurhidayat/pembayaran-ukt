@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DetailUser;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -9,7 +10,7 @@ class AdminController extends Controller
 {
     public function index()
     {
-        $users = User::all();
-        return view('admin.daftar-mahasiswa', ['users' => $users]);
+        $detailUsers = DetailUser::all();
+        return view('admin.daftar-mahasiswa', ['detailUsers' => $detailUsers]);
     }
 }
