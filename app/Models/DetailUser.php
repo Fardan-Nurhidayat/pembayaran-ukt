@@ -22,7 +22,7 @@ class DetailUser extends Model
         'kelompok',
     ];
 
-    public function user()
+    public function user(): HasOne
     {
         return $this->hasOne(User::class, 'id', 'user_id');
     }
